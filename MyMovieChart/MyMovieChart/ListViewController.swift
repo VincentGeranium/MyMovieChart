@@ -25,9 +25,10 @@ class ListViewController: UIViewController {
     }()
     
     var dataSet = [
-        ("다크 나이트", "영웅물 영화", "2008-09-04", 8.95),
-        ("호우시절", "비 내리는 영화", "2009-10-08", 7.31),
-        ("말할 수 없는 비밀", "비밀이 많은 영화", "2015-05-07", 9.19),
+        ("다크 나이트", "박쥐 가면 쓰고 나오는 영웅물 영화", "2008-09-04", 8.95),
+        ("호우시절", "비 많이 내리는 영화", "2009-10-08", 7.31),
+        ("말할 수 없는 비밀", "비밀이 많은데 말 못하는 영화", "2015-05-07", 9.19),
+        ("해리 포터와 마법사의 돌","나의 모든 추억이 담겨있는 영화", "2001-12-24", 9.26),
     ]
     
     private let listTableView: UITableView = {
@@ -86,6 +87,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.cellLabel.text = row.title
+        cell.subTitleCellLabel.text = row.description
         
         return cell
     }
