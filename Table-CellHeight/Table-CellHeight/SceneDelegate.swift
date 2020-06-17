@@ -11,12 +11,13 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    
+    
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let rootVC = ViewController()
-        let naviVC = UINavigationController.init(rootViewController: rootVC)
-        
+        let naviVC = UINavigationController(rootViewController: rootVC)
+//        let naviBarItem = naviVC.navigationBar.topItem?.title = "글 목록"
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
